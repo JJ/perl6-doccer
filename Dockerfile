@@ -3,7 +3,7 @@ LABEL version="3.2" maintainer="JJ Merelo <jjmerelo@GMail.com>"
 
 RUN apk update && apk upgrade && apk add graphviz  && apk add ca-certificates wget && update-ca-certificates
 
-ADD https://github.com/perl6/doc/raw/master/META6.json /tmp/
+ADD https://github.com/Raku/doc/raw/master/META6.json /tmp/
 RUN cd /tmp/ && zef update && zef install --deps-only .
 
 # Will run this
